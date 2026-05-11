@@ -20,20 +20,20 @@ body {
 .header {
   text-align: center;
   padding: 40px 20px;
-  background-color: #d5c4a1;
+  background-color: #2b4c6f;
   border-radius: 12px;
   margin-bottom: 30px;
 }
 
 .header h1 {
   font-size: 2.2rem;
-  color: #3c2a1e;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .subtitle {
   font-style: italic;
-  color: #6b4f3a;
+  color: #d5e4f0;
   font-size: 1.1rem;
 }
 
@@ -57,7 +57,7 @@ body {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #a68a6e;
+  border: 4px solid #2b4c6f;
 }
 
 .about-text {
@@ -67,7 +67,7 @@ body {
 
 .about-text h2 {
   margin-bottom: 12px;
-  color: #5a3e2b;
+  color: #2b4c6f;
   font-size: 1.6rem;
 }
 
@@ -87,7 +87,7 @@ body {
 
 .interests-section h2 {
   margin-bottom: 15px;
-  color: #5a3e2b;
+  color: #3c2a1e;
   font-size: 1.6rem;
 }
 
@@ -102,11 +102,12 @@ body {
   background-color: #f5ebe0;
   border-radius: 8px;
   font-size: 1rem;
+  border-left: 4px solid #2b4c6f;
 }
 
 .interests-list li::before {
   content: "~ ";
-  color: #a68a6e;
+  color: #5a3e2b;
   font-weight: bold;
 }
 
@@ -120,13 +121,13 @@ body {
 
 .games-section h2 {
   margin-bottom: 15px;
-  color: #5a3e2b;
+  color: #2b4c6f;
   font-size: 1.6rem;
 }
 
 .sort-btn {
-  background-color: #8b6f47;
-  color: #f5ebe0;
+  background-color: #2b4c6f;
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
@@ -137,7 +138,7 @@ body {
 }
 
 .sort-btn:hover {
-  background-color: #6b4f3a;
+  background-color: #1a3550;
 }
 
 .games-list {
@@ -154,7 +155,7 @@ body {
 .footer {
   text-align: center;
   padding: 20px;
-  color: #6b4f3a;
+  color: #5a3e2b;
   font-size: 0.9rem;
-  border-top: 1px solid #d5c4a1;
+  border-top: 2px solid #2b4c6f;
 }
