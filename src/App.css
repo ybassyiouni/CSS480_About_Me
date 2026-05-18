@@ -16,6 +16,63 @@ body {
   padding: 20px;
 }
 
+/* skip link - hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background-color: #2b4c6f;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  background-color: #2b4c6f;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.nav-btn {
+  background: none;
+  border: 2px solid transparent;
+  color: #d5e4f0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.nav-btn:hover {
+  background-color: #1a3550;
+}
+
+.nav-btn.active {
+  background-color: #1a3550;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* focus indicators for all interactive elements */
+.nav-btn:focus,
+.sort-btn:focus,
+a:focus {
+  outline: 3px solid #e8a838;
+  outline-offset: 2px;
+}
+
 /* header */
 .header {
   text-align: center;
@@ -149,6 +206,84 @@ body {
   padding: 8px 5px;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+/* things to read page */
+.reads-section {
+  background-color: #ede0d4;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.reads-intro {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.reads-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reads-item {
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  background-color: #f5ebe0;
+  border-radius: 8px;
+  border-left: 4px solid #2b4c6f;
+  line-height: 1.5;
+}
+
+.reads-item a {
+  color: #2b4c6f;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.reads-item a:hover {
+  color: #1a3550;
+}
+
+.reads-desc {
+  color: #5a3e2b;
+  font-size: 0.95rem;
+}
+
+/* keyboard access page */
+.keyboard-section {
+  background-color: #ede0d4;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.keyboard-section h2 {
+  color: #2b4c6f;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.keyboard-section h3 {
+  color: #3c2a1e;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.keyboard-section p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.keyboard-list {
+  padding-left: 24px;
+  margin-bottom: 10px;
+}
+
+.keyboard-list li {
+  padding: 6px 0;
+  line-height: 1.6;
 }
 
 /* footer */
