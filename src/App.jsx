@@ -35,9 +35,17 @@ function Nav({ page, setPage }) {
         Things to Read
       </button>
       <button
+        className={`nav-btn ${page === 'movies' ? 'active' : ''}`}
+        onClick={() => setPage('movies')}
+        accessKey="3"
+        aria-current={page === 'movies' ? 'page' : undefined}
+      >
+        Movies
+      </button>
+      <button
         className={`nav-btn ${page === 'keyboard' ? 'active' : ''}`}
         onClick={() => setPage('keyboard')}
-        accessKey="3"
+        accessKey="4"
         aria-current={page === 'keyboard' ? 'page' : undefined}
       >
         Keyboard Access
@@ -149,6 +157,69 @@ function ReadsPage() {
   )
 }
 
+function MoviesPage() {
+  const spotlight = {
+    title: 'Project Hail Mary',
+    year: 2026,
+    image: 'https://image.tmdb.org/t/p/w500/yihdXomYb5kTeSivtFndMy5iDmf.jpg',
+    description: 'Just saw this one and wow. I read the book a while back and was worried they would mess it up but they really didn\'t. Ryan Gosling kills it and the whole thing just had me locked in from start to finish.',
+  }
+
+  const movies = [
+    {
+      title: 'Spider-Man: Across the Spider-Verse',
+      year: 2023,
+      image: 'https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg',
+      description: 'The art style in this is so crazy. Like every single frame could be a wallpaper. Miles is the best Spider-Man and I will die on that hill.',
+    },
+    {
+      title: 'Avengers: Infinity War',
+      year: 2018,
+      image: 'https://media.themoviedb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg',
+      description: 'I don\'t care what anyone says this is the best Marvel movie. Thanos actually felt like a real threat and that ending had everyone in my theater just sitting there in shock.',
+    },
+    {
+      title: 'Sinners',
+      year: 2025,
+      image: 'https://media.themoviedb.org/t/p/w500/fWPgbnt2LSqkQ6cdQc0SZN9CpLm.jpg',
+      description: 'Coogler and MBJ back at it again. The vibe of this movie is so unique, the blues music mixed with the horror stuff just works so well. Go watch it if you haven\'t.',
+    },
+  ]
+
+  return (
+    <>
+      <header className="movies-hero">
+        <h1 className="movies-hero-title">My Movie Picks</h1>
+        <p className="movies-hero-sub">some of my recent favorites</p>
+      </header>
+
+      <section className="spotlight-section">
+        <h2 className="spotlight-label">Currently Obsessed With</h2>
+        <div className="spotlight-card">
+          <img src={spotlight.image} alt={spotlight.title + ' poster'} className="spotlight-img" />
+          <div className="spotlight-info">
+            <h3>{spotlight.title} <span className="movie-year">({spotlight.year})</span></h3>
+            <p>{spotlight.description}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="movies-grid-section">
+        <h2>More Movies I Love</h2>
+        <div className="movies-grid">
+          {movies.map((movie, index) => (
+            <div key={index} className="movie-card">
+              <img src={movie.image} alt={movie.title + ' poster'} className="movie-card-img" />
+              <h3>{movie.title} <span className="movie-year">({movie.year})</span></h3>
+              <p>{movie.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  )
+}
+
 function KeyboardPage() {
   return (
     <>
@@ -183,7 +254,8 @@ function KeyboardPage() {
         <ul className="keyboard-list">
           <li><strong>1</strong> - Home</li>
           <li><strong>2</strong> - Things to Read</li>
-          <li><strong>3</strong> - Keyboard Access</li>
+          <li><strong>3</strong> - Movies</li>
+          <li><strong>4</strong> - Keyboard Access</li>
         </ul>
 
         <h3>Design Goals</h3>
@@ -212,6 +284,7 @@ function App() {
       <main id="main-content">
         {page === 'home' && <HomePage />}
         {page === 'reads' && <ReadsPage />}
+        {page === 'movies' && <MoviesPage />}
         {page === 'keyboard' && <KeyboardPage />}
       </main>
       <footer className="footer">

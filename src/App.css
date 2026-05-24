@@ -286,6 +286,127 @@ a:focus {
   line-height: 1.6;
 }
 
+/* movies page */
+.movies-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.movies-hero-title {
+  font-size: 3rem;
+  color: #e8a838;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.movies-hero-sub {
+  font-style: italic;
+  color: #d5e4f0;
+  font-size: 1.1rem;
+}
+
+.spotlight-section {
+  background-color: #ede0d4;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.spotlight-label {
+  color: #1a1a2e;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  border-bottom: 3px solid #e8a838;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.spotlight-card {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.spotlight-img {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.spotlight-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.spotlight-info h3 {
+  font-size: 1.5rem;
+  color: #2b4c6f;
+  margin-bottom: 10px;
+}
+
+.spotlight-info p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.movie-year {
+  font-weight: normal;
+  color: #5a3e2b;
+  font-size: 0.95rem;
+}
+
+.movies-grid-section {
+  background-color: #dbc9ad;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.movies-grid-section h2 {
+  color: #3c2a1e;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.movies-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: #f5ebe0;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.movie-card-img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card h3 {
+  font-size: 1.1rem;
+  color: #2b4c6f;
+  margin-bottom: 8px;
+}
+
+.movie-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #3c2a1e;
+}
+
 /* footer */
 .footer {
   text-align: center;
